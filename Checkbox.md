@@ -35,6 +35,15 @@ El radio button preferentemente tiene que ser cuadrado de 15x15
 
 ![mlcheckboxclassdiagram](https://cloud.githubusercontent.com/assets/17389431/16456122/2c3e5316-3ded-11e6-8d5d-811580fff541.png)
 
+###### Habilitar o Deshabilitar
+El CheckBox admite la posibilidad de Habilitar o Deshabilitar programáticamente su función con el siguiente método:
+
+``` objective-c
+- (void)setEnabled:(BOOL)enabled Animated:(BOOL)animated
+```
+
+El elemento queda grisado en el estado On u Off en el que estaba al momento de ejecutar ese método, y no va a admitir cambios de estado mientras está Deshabilitado.
+
 ###### Ejemplo de uso:
 - Inicializando el check button
 ``` objective-c
@@ -50,6 +59,11 @@ MLCheckBox *checkBox = [[MLCheckBox alloc] init];
 [checkBox isOff];
 ```
 
+- Habilitar o Deshabilitar
+``` objective-c
+[checkBox setEnabled:YES Animated:YES];
+[checkBox setEnabled:NO Animated:YES];
+```
 # Check List
 
 ## Uso
